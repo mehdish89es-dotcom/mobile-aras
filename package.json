@@ -1,0 +1,1 @@
+{"name":"mobile-aras-live","version":"1.0.0","private":true,"scripts":{"start":"node server.js"},"dependencies":{"cheerio":"^1.1.2","express":"^4.21.2","node-fetch":"^3.3.2"}}
