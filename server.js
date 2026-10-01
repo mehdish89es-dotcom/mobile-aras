@@ -22,7 +22,7 @@ function parsePage(html,brand){
    if(!/(Samsung|Galaxy|Xiaomi|Redmi|Poco|iPhone|Apple)/i.test(name)) return;
    const price=faNum(priceMatch[1]); if(price<100000) return;
    const img=$(tr).find('img').first().attr('src')||'';
-   out.push({name,brand,price,image:img.startsWith('//')?'https:'+img:img,source:'mobile.ir',rawDate:t.includes('امروز')?'امروز':(t.match(/\d+\s*(روز|هفته) پیش/)||[])[0]||'ثبت‌شده در منبع')});
+  out.push({name,brand,price,image:img.startsWith('//')?'https:'+img:img,source:'mobile.ir',rawDate:t.includes('امروز')?'امروز':((t.match(/\d+\s*(روز|هفته) پیش/)||[])[0]||'ثبت‌شده در منبع')});
  });
  const map=new Map(); for(const x of out) if(!map.has(x.name)) map.set(x.name,x); return [...map.values()];
 }
